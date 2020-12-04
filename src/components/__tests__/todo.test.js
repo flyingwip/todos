@@ -60,16 +60,9 @@ describe("<Todo /> styling behaviour", () => {
     const component = shallow(
       <Todo onClick={mockFn} completed={true} text="go shopping" />
     );
+
     expect(component.props().style).toEqual({
       textDecoration: "line-through",
     });
   });
 });
-
-// full rendering
-// we need to import mount
-// for lifecylcle hooks
-//     - componentDidMount
-//     - componentDidUpdat
-// when components has child components
-// you have to do a full DOM rendering
