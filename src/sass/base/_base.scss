@@ -1,0 +1,40 @@
+// partial file. Name always starts with _ (underscore)
+// resets, styles for html en body elements
+
+/* the universal selector used for resetting */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /*   
+  what this does is to change the box model
+  so that the borders and the paddings are no longer added
+  to the total width or the total height
+  that we specify for a box. 
+  */
+    box-sizing: inherit;
+}
+
+html {
+    // this defines what 1rem is (based on 16px)
+    font-size: 62.5%;
+}
+
+/* let's set some overall font properties
+  for the entire webpage. */
+body {
+    padding: 3rem;
+    box-sizing: border-box;
+
+    background: rgb(226, 230, 237);
+    background: linear-gradient(
+        106deg,
+        rgba(226, 230, 237, 1) 0%,
+        rgba(210, 216, 228, 1) 50%,
+        rgba(231, 234, 240, 1) 100%
+    );
+    background-size: cover;
+
+    height: 100vh;
+}

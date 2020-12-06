@@ -1,0 +1,21 @@
+.addtodo {
+    padding: 2rem;
+
+    &__input {
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 1rem;
+
+        input {
+            font-size: 1.5rem;
+            font-family: inherit;
+            color: inherit;
+            padding: 1.5rem 2rem;
+            border-radius: 3px;
+            background-color: rgba($color-white, 0.5);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 100%;
+        }
+    }
+}
