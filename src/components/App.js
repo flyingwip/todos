@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from './Footer'
+// import Footer from './Footer'
 import AddTodo from '../containers/AddTodo'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import PlusLink from '../containers/PlusLink'
@@ -11,7 +11,7 @@ const App = () => (
         <AddTodo />
         <VisibleTodoList />
         <PlusLink />
-        <Footer />
+        {/* <Footer /> */}
     </div>
 )
 

@@ -5,6 +5,9 @@ import PropTypes from 'prop-types'
 
 const AddTodo = ({ dispatch, showTodoInputField }) => {
     const blaat = () => {
+        if (input.value.length === 0) {
+            return dispatch(showTodoInput(false))
+        }
         dispatch(addTodo(input.value))
         input.value = ''
         return dispatch(showTodoInput(false))
@@ -18,26 +21,29 @@ const AddTodo = ({ dispatch, showTodoInputField }) => {
     return (
         <div className="addtodo">
             <h4>Add a task:</h4>
-            <form
+            {/* <form
                 onSubmit={(e) => {
                     e.preventDefault()
+                    // if there is no value then exit
+
                     if (!input.value.trim()) {
                         return
                     }
                     dispatch(addTodo(input.value))
                     input.value = ''
                 }}
-            >
-                <div className="addtodo__input">
-                    <input
-                        ref={(node) => (input = node)}
-                        data-testid="add-todo-input"
-                        onBlur={blaat}
-                    />
-                </div>
+            > */}
+            <div className="addtodo__input">
+                <input
+                    ref={(node) => (input = node)}
+                    data-testid="add-todo-input"
+                    placeholder="Enter a task"
+                    onBlur={blaat}
+                />
+            </div>
 
-                {/* <button type="submit">Add Todo</button> */}
-            </form>
+            {/* <button type="submit">Add Todo</button> */}
+            {/* </form> */}
         </div>
     )
 }
