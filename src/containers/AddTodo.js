@@ -19,11 +19,11 @@ const AddTodo = ({ dispatch, showTodoInputField }) => {
 
     let input
 
-    if (!showTodoInputField) {
-        return false
-    }
+    let visibility = showTodoInputField
+        ? 'addtodo__input--visible'
+        : 'addtodo__input--hidden'
     return (
-        <div className="addtodo">
+        <div className={`addtodo ${visibility}`}>
             <h4>Add a task:</h4>
             <div className="addtodo__input">
                 <input
