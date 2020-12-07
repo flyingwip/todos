@@ -4,13 +4,17 @@ import { addTodo, showTodoInput } from '../actions'
 import PropTypes from 'prop-types'
 
 const AddTodo = ({ dispatch, showTodoInputField }) => {
-    const blaat = () => {
-        if (input.value.length === 0) {
+    const onBlurHandler = (e) => {
+        if (e.key === 'Enter' || e.key === undefined) {
+            if (!input.value.trim()) {
+                return dispatch(showTodoInput(false))
+            }
+            dispatch(addTodo(input.value))
+            input.value = ''
             return dispatch(showTodoInput(false))
         }
-        dispatch(addTodo(input.value))
-        input.value = ''
-        return dispatch(showTodoInput(false))
+
+        return
     }
 
     let input
@@ -21,29 +25,14 @@ const AddTodo = ({ dispatch, showTodoInputField }) => {
     return (
         <div className="addtodo">
             <h4>Add a task:</h4>
-            {/* <form
-                onSubmit={(e) => {
-                    e.preventDefault()
-                    // if there is no value then exit
-
-                    if (!input.value.trim()) {
-                        return
-                    }
-                    dispatch(addTodo(input.value))
-                    input.value = ''
-                }}
-            > */}
             <div className="addtodo__input">
                 <input
                     ref={(node) => (input = node)}
                     data-testid="add-todo-input"
-                    placeholder="Enter a task"
-                    onBlur={blaat}
+                    onKeyPress={onBlurHandler}
+                    onBlur={onBlurHandler}
                 />
             </div>
-
-            {/* <button type="submit">Add Todo</button> */}
-            {/* </form> */}
         </div>
     )
 }
