@@ -27,10 +27,8 @@ describe('Connected Component Full App Integretion Tests', () => {
         // select the input element
         const inputElement = getByTestId('add-todo-input')
 
-        // // change the value of the input field
+        // change the value of the input field
         fireEvent.change(inputElement, { target: { value: 'feed the cat' } })
-        // simulate blur event
-        // fireEvent.blur(inputElement)
 
         fireEvent.keyPress(inputElement, {
             key: 'Enter',
@@ -38,15 +36,11 @@ describe('Connected Component Full App Integretion Tests', () => {
             charCode: 13,
         })
 
-        // fireEvent.keyDown(domNode, { key: 'A', code: 'KeyA' })
+        // now we can start with the assertions
+        const liElement = container.querySelector('.todolist')
 
-        // // click the submit button
-        // fireEvent.click(getByText("Add Todo"));
-
-        // // now we can start with the assertions
-        const liElement = container.querySelector('li')
-        expect(liElement.textContent).toBe('feed the cat')
+        expect(liElement.textContent).toContain('feed the cat')
         // // also test on not to be
-        expect(liElement.textContent).not.toBe('jibberish')
+        expect(liElement.textContent).not.toContain('jibberish')
     })
 })
