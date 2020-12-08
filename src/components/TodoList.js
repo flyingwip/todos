@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Todo from './Todo'
 
 const TodoList = ({ todos, toggleTodo }) => (
-    <div>
+    <div className="list-mask">
         <h4 className="heading-secondary">Tasks</h4>
         <ul className="todolist">
             {todos.map((todo) => (

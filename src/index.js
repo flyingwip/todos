@@ -16,6 +16,17 @@ const store = createStore(rootReducer, {
         },
         { id: uuidv4(), text: "Fix mom's bike ", completed: false },
         { id: uuidv4(), text: 'Feed the cat', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 1', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 2', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 3', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 4', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 5', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 6', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 7', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 7', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 8', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 9', completed: false },
+        { id: uuidv4(), text: 'lorump ipsum 10', completed: false },
     ],
 })
 
