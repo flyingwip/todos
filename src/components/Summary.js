@@ -1,27 +1,49 @@
 import React from 'react'
 
-const Summary = () => {
+const Summary = ({ todos }) => {
+    const completed = todos.filter((t) => t.completed).length
+    let percentage = 0
+    if (completed > 0) {
+        percentage = Math.round(
+            (todos.filter((t) => t.completed).length / todos.length) * 100
+        )
+    }
+    // console.log(percentage)
+    let blaat = `${percentage}, 100`
+
+    console.log(blaat)
+
+    // console.log(todos.length)
+    // console.log(todos.filter((t) => t.completed).length)
+
     return (
         <div className="summary">
             <div className="summary__container">
                 <div className="summary__col">
                     <div className="summary__graph">
-                        <svg viewBox="0 0 45 45" className="circular-chart">
+                        <svg
+                            viewBox="0 0 45 45"
+                            className="summary__circular-chart"
+                        >
                             <path
-                                className="circle-bg"
+                                className="summary__circle-bg"
                                 d="M18 2.0845
                                 a 15.9155 15.9155 0 0 1 0 31.831
                                  a 15.9155 15.9155 0 0 1 0 -31.831"
                             />
                             <path
-                                className="circle"
-                                strokeDasharray="66, 100"
+                                className="summary__circle"
+                                strokeDasharray={blaat}
                                 d="M18 2.0845
                                 a 15.9155 15.9155 0 0 1 0 31.831
                                 a 15.9155 15.9155 0 0 1 0 -31.831"
                             />
-                            <text x="14" y="20.35" className="percentage">
-                                30%
+                            <text
+                                x="14"
+                                y="20.35"
+                                className="summary__percentage"
+                            >
+                                {percentage}%
                             </text>
                         </svg>
                     </div>
@@ -31,15 +53,22 @@ const Summary = () => {
                         <ul>
                             <li>
                                 <span className="description">Total Tasks</span>
-                                <span className="number">100</span>
+                                <span className="number">{todos.length}</span>
                             </li>
                             <li>
                                 <span className="description">Open</span>
-                                <span className="number">8</span>
+                                <span className="number">
+                                    {todos.filter((t) => !t.completed).length}
+                                </span>
                             </li>
                             <li>
                                 <span className="description">Completed</span>
-                                <span className="number">23</span>
+                                <span className="number">
+                                    {' '}
+                                    {
+                                        todos.filter((t) => t.completed).length
+                                    }{' '}
+                                </span>
                             </li>
                         </ul>
                     </div>

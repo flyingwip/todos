@@ -1,7 +1,7 @@
 import React from 'react'
 // import Footer from './Footer'
 import AddTodo from '../containers/AddTodo'
-import Summary from '../components/Summary'
+import SummaryLink from '../containers/SummaryLink'
 import VisibleTodoList from '../containers/VisibleTodoList'
 import PlusLink from '../containers/PlusLink'
 
@@ -14,7 +14,7 @@ const App = () => {
                 {today.toLocaleDateString('en-US', { weekday: 'long' })},{' '}
                 {today.getDate()}
             </h2>
-            <Summary />
+            <SummaryLink />
             <AddTodo />
             <VisibleTodoList />
             <PlusLink />

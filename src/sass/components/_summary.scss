@@ -24,28 +24,31 @@
         padding: 1rem;
     }
 
-    .circular-chart {
+    &__circular-chart {
         position: relative;
         left: 65%;
         transform: translateX(-50%);
     }
 
-    .circle-bg {
+    &__circle-bg {
         fill: none;
         stroke: #eee;
         stroke-width: 0.15rem;
     }
 
-    .circle {
+    &__circle {
         fill: none;
         stroke: $color-tertairy-dark;
         stroke-width: 0.25rem;
         stroke-linecap: round;
+        animation: progress 1s ease-out forwards;
+        // backface-visibility: hidden;
     }
 
-    .percentage {
+    &__percentage {
         font-weight: 300;
         font-size: 0.6rem;
+        background-color: pink;
     }
 
     &__list {
