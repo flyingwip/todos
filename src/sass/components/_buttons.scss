@@ -12,6 +12,27 @@
     &:focus {
     }
 
+    &--tag {
+        background-color: #fff;
+        color: darken($color-tertairy-dark, 30%);
+        padding: 0.1rem 1rem;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        border: 1px solid darken($color-tertairy-dark, 30%);
+
+        &:hover {
+            background-color: $color-tertairy-light;
+            color: #fff;
+            border-color: #fff;
+        }
+    }
+
+    &--highlight {
+        background-color: $color-tertairy-dark;
+        color: #fff;
+        border-color: #fff;
+    }
+
     &--plus {
         // display: inline-block;
         width: 5rem;

@@ -4,7 +4,6 @@ import Todo from './Todo'
 
 const TodoList = ({ todos, toggleTodo }) => (
     <div>
-        <h4 className="heading-secondary">Tasks</h4>
         <div className="list-mask">
             <ul className="todolist">
                 {todos.map((todo) => (

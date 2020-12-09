@@ -1,0 +1,16 @@
+.header {
+    list-style: none;
+
+    padding: 0 2rem;
+
+    :first-child {
+        float: left;
+    }
+
+    &__item {
+        float: right;
+        margin: 0 0.2rem;
+    }
+
+    @include clearfix;
+}
