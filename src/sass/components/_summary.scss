@@ -3,7 +3,7 @@
 
     &__container {
         background-color: #fff;
-        padding: 0 1rem;
+        // padding: 0 1rem;
         border-radius: 5px;
     }
 
@@ -12,8 +12,8 @@
         display: inline-block;
         text-align: center;
         position: relative;
-        top: 1.5rem;
-        height: 8rem;
+        padding: 1rem 0;
+        top: 0.5rem;
 
         ul {
             list-style: none;
@@ -21,13 +21,13 @@
     }
 
     &__graph {
-        padding: 1rem;
+        // padding: 1rem;
     }
 
     &__circular-chart {
         position: relative;
-        left: 65%;
-        transform: translateX(-50%);
+        // left: 65%;
+        // transform: translateX(-50%);
     }
 
     &__circle-bg {
@@ -47,7 +47,7 @@
 
     &__percentage {
         font-weight: 300;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         background-color: pink;
     }
 
@@ -55,7 +55,7 @@
         ul {
             text-align: left;
             position: relative;
-            top: -7rem;
+            top: -3.5rem;
             left: 1rem;
 
             li {
