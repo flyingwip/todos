@@ -15,6 +15,7 @@ const Todo = ({ onClick, completed, text, id }) => (
             id={id}
             name={id}
             onClick={onClick}
+            defaultChecked={completed}
         />
         <label htmlFor={id} className="todolist__radio-label">
             <span className="todolist__radio-button"></span>

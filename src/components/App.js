@@ -1,10 +1,9 @@
 import React from 'react'
-import Footer from './Footer'
-import Header from './Header'
 import AddTodo from '../containers/AddTodo'
+import PlusLink from '../containers/PlusLink'
 import SummaryLink from '../containers/SummaryLink'
 import VisibleTodoList from '../containers/VisibleTodoList'
-import PlusLink from '../containers/PlusLink'
+import Header from './Header'
 
 const App = () => {
     const today = new Date()
