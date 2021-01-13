@@ -8,16 +8,18 @@ import './sass/main.scss'
 import { v4 as uuidv4 } from 'uuid'
 
 const store = createStore(rootReducer, {
-    todos: [
-        {
-            id: uuidv4(),
-            text: 'Take the coat to dry cleaning',
-            completed: false,
-        },
-        { id: uuidv4(), text: "Fix mom's bike ", completed: false },
-        { id: uuidv4(), text: 'Feed the cat', completed: false },
-    ],
+    todos: [],
 })
+
+// todos: [
+//     {
+//         id: uuidv4(),
+//         text: 'Take the coat to dry cleaning',
+//         completed: false,
+//     },
+//     { id: uuidv4(), text: "Fix mom's bike ", completed: false },
+//     { id: uuidv4(), text: 'Feed the cat', completed: false },
+// ],
 
 render(
     <Provider store={store}>
